@@ -13,7 +13,12 @@ exports.max = function max(array) {
 };
 
 exports.avg = function avg(array) {
-    return !array || !(array.length) ? 0 :
-    array.reduce((accum, value) => (accum+value) / array.length;
-);
+    if(!array || !(array.length)){
+    	return 0;
+    }
+    const sum = array.reduce((accum, value) => accum +=value,0); 
+    const end = sum / array.length;
+    return end;
+    
+
 };
